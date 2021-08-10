@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.KalkulatorActivity">
+
+    <Button
+        android:id="@+id/btn_tambah"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="+"
+        android:onClick="tambah"
+        app:layout_constraintStart_toStartOf="@+id/edt_angka2"
+        app:layout_constraintTop_toBottomOf="@+id/edt_angka2" />
+
+    <Button
+        android:id="@+id/btn_kurang"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="-"
+        android:onClick="kurang"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_tambah"
+        app:layout_constraintStart_toEndOf="@+id/btn_tambah"
+        app:layout_constraintTop_toTopOf="@+id/btn_tambah" />
+
+    <Button
+        android:id="@+id/btn_bagi"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="/ "
+        android:onClick="bagi"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kurang"
+        app:layout_constraintEnd_toEndOf="@+id/edt_angka2"
+        app:layout_constraintTop_toTopOf="@+id/btn_kurang" />
+
+    <Button
+        android:id="@+id/btn_kali"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="x"
+        android:onClick="kali"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_bagi"
+        app:layout_constraintEnd_toStartOf="@+id/btn_bagi"
+        app:layout_constraintTop_toTopOf="@+id/btn_bagi" />
+
+    <Button
+        android:id="@+id/btn_bersihkan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="86dp"
+        android:text="Bersihkan"
+        android:onClick="bersihkan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_angka2" />
+
+    <EditText
+        android:id="@+id/edt_angka2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Masukkan Angka Kedua"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/edt_angka1"
+        app:layout_constraintStart_toStartOf="@+id/edt_angka1"
+        app:layout_constraintTop_toBottomOf="@+id/edt_angka1" />
+
+    <EditText
+        android:id="@+id/edt_angka1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Masukkan Angka Pertama"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Masukkan Dua Angka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hasil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bersihkan" />
+
+    <TextView
+        android:id="@+id/txt_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
